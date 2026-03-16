@@ -1,10 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Litoral Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Litoral Studio | Coastal Architecture · Design & Build</title>
+
+  <meta
+    name="description"
+    content="Coastal architecture, design, and construction for premium beachfront and investment properties in El Salvador."
+  />
+
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-<h1>TEST</h1>
-<p>If you see this the deployment works.</p>
+  <header class="hero">
+    <div class="hero-top">
+      <a href="#" class="brand" aria-label="Litoral home">
+        <img src="assets/img/litoral-logo-full.svg" alt="Litoral logo" class="logo logo-full" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#coastal" data-i18n="nav.coastal">Coastal Development</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="lang-toggle" id="langToggle" aria-label="Change language">
+        <span class="lang-globe">◌</span>
+        <span class="lang-option active" data-lang-choice="en">EN</span>
+        <span class="lang-separator">|</span>
+        <span class="lang-option" data-lang-choice="es">ES</span>
+      </button>
+    </div>
+
+    <div class="hero-slider" aria-hidden="true">
+      <div class="slide active" style="background-image: url('assets/img/hero/hero-01.png');"></div>
+      <div class="slide" style="background-image: url('assets/img/hero/hero-02.png');"></div>
+      <div class="slide" style="background-image: url('assets/img/hero/hero-03.png');"></div>
+
+      <div class="slider-dots"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Premium coastal architecture & development</p>
+      <h1 data-i18n="hero.title">Architecture for coastal living.</h1>
+      <p class="motto" data-i18n="hero.text">
+        Design, development, and construction for premium beachfront and investment properties in El Salvador.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="cta-primary" data-i18n="hero.ctaProjects">View Projects</a>
+        <a href="https://wa.me/XXXXXXXXXX" class="cta-secondary" target="_blank" rel="noopener" data-i18n="hero.ctaContact">
+          Start Your Project
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects" class="section projects">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-kicker" data-i18n="projects.kicker">Selected work</p>
+          <h2 data-i18n="projects.title">Featured Projects</h2>
+          <p class="section-intro" data-i18n="projects.intro">
+            A curated selection of built work, remodels, pools, and coastal design studies.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="assets/img/project01.png" alt="Project 1" />
+            <div class="project-card-body">
+              <p class="project-type" data-i18n="projects.card1.type">Built Work</p>
+              <h3 data-i18n="projects.card1.title">Beach Residence Remodel</h3>
+              <p class="project-meta" data-i18n="projects.card1.meta">La Libertad Coast — 2024</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/img/project02.png" alt="Project 2" />
+            <div class="project-card-body">
+              <p class="project-type" data-i18n="projects.card2.type">Built Work</p>
+              <h3 data-i18n="projects.card2.title">Pool & Outdoor Living Area</h3>
+              <p class="project-meta" data-i18n="projects.card2.meta">Surf City Area — 2024</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/img/project03.png" alt="Project 3" />
+            <div class="project-card-body">
+              <p class="project-type" data-i18n="projects.card3.type">Concept Study</p>
+              <h3 data-i18n="projects.card3.title">Coastal Villa Concept</h3>
+              <p class="project-meta" data-i18n="projects.card3.meta">El Zonte — Proposal</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-action">
+          <a href="#" class="cta-secondary" data-i18n="projects.cta">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="coastal" class="section coastal">
+      <div class="section-inner narrow">
+        <header class="section-header centered">
+          <p class="section-kicker" data-i18n="coastal.kicker">Why now</p>
+          <h2 data-i18n="coastal.title">Why Invest on the Coast?</h2>
+          <p class="section-intro" data-i18n="coastal.text">
+            El Salvador’s Pacific coast is experiencing rapid development and international attention. We help investors navigate the process from concept and design to construction and delivery.
+          </p>
+        </header>
+
+        <div class="coastal-points">
+          <article class="coastal-point">
+            <h3 data-i18n="coastal.point1.title">Surf City Momentum</h3>
+            <p data-i18n="coastal.point1.text">Position your project in one of the country’s fastest-growing coastal corridors.</p>
+          </article>
+
+          <article class="coastal-point">
+            <h3 data-i18n="coastal.point2.title">Premium Tourism & Living</h3>
+            <p data-i18n="coastal.point2.text">Design for high-end rentals, second homes, boutique hospitality, and long-term value.</p>
+          </article>
+
+          <article class="coastal-point">
+            <h3 data-i18n="coastal.point3.title">Turnkey Local Guidance</h3>
+            <p data-i18n="coastal.point3.text">From local conditions to execution, we simplify development for remote and international clients.</p>
+          </article>
+        </div>
+
+        <div class="section-action">
+          <a
+            href="https://www.google.com/search?q=surf+city+el+salvador+development"
+            target="_blank"
+            rel="noopener"
+            class="cta-secondary"
+            data-i18n="coastal.cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-kicker light" data-i18n="services.kicker">What we do</p>
+          <h2 data-i18n="services.title">Our Services</h2>
+          <p class="section-intro light" data-i18n="services.intro">
+            Design-led services for premium coastal properties and investment-driven projects.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="assets/icons/s-arquitectura.png" alt="" class="service-icon" />
+            <h3 data-i18n="services.card1.title">Architectural Design</h3>
+            <p data-i18n="services.card1.text">
+              Architecture tailored to coastal context, lifestyle, climate, and long-term property value.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/icons/s-construccion.png" alt="" class="service-icon" />
+            <h3 data-i18n="services.card2.title">Design & Build</h3>
+            <p data-i18n="services.card2.text">
+              Integrated project delivery from concept to execution with clear coordination and quality control.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/icons/s-supervision.png" alt="" class="service-icon" />
+            <h3 data-i18n="services.card3.title">Project Development</h3>
+            <p data-i18n="services.card3.text">
+              Strategic support for investment-minded clients seeking premium residential or hospitality opportunities.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/icons/s-remodelacion.png" alt="" class="service-icon" />
+            <h3 data-i18n="services.card4.title">Turnkey Solutions</h3>
+            <p data-i18n="services.card4.text">
+              End-to-end guidance for remote buyers and international clients who need reliable local execution.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-action">
+          <a href="https://wa.me/XXXXXXXXXX" class="cta-primary" target="_blank" rel="noopener" data-i18n="services.cta">
+            Start Your Project
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="socials">
+      <a href="https://wa.me/XXXXXXXXXX" target="_blank" rel="noopener">
+        <img src="assets/icons/whatsapp.png" alt="" />
+        WhatsApp
+      </a>
+      <a href="#" aria-label="Instagram">
+        <img src="assets/icons/instagram.png" alt="" />
+        Instagram
+      </a>
+      <a href="#" aria-label="TikTok">
+        <img src="assets/icons/tiktok.png" alt="" />
+        TikTok
+      </a>
+    </div>
+
+    <small data-i18n="footer.copy">© Litoral — El Salvador</small>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -157,10 +157,11 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .logo-full {
-  width: 240px;
+  width: 310px;
   max-width: 100%;
   height: auto;
 }
@@ -200,6 +201,7 @@ a {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  flex: 0 0 auto;
 }
 
 .lang-option {
@@ -288,6 +290,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  pointer-events: auto;
 }
 
 .cta-primary,
@@ -297,11 +300,11 @@ a {
   justify-content: center;
   min-height: 48px;
   padding: 0.9rem 1.35rem;
-  border-radius: 999px;
+  border-radius: 8px;
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .cta-primary {
@@ -330,7 +333,8 @@ a {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
+  pointer-events: auto;
 }
 
 .slider-dots button {
@@ -376,6 +380,7 @@ a {
 
 .project-card-body {
   padding: 1.1rem 1.1rem 1.2rem;
+  background: linear-gradient(180deg, #163b46 0%, #1e4a57 100%);
 }
 
 .project-type {
@@ -383,13 +388,13 @@ a {
   font-size: 0.73rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(207, 196, 168, 0.9);
 }
 
 .project-card h3 {
   margin: 0 0 0.3rem;
-  color: var(--accent-strong);
-  font-family: var(--font-brand);
+  color: #fff;
+  font-family: var(--font-main);
   font-weight: 400;
   font-size: 1.45rem;
   line-height: 1.15;
@@ -397,7 +402,7 @@ a {
 
 .project-meta {
   margin: 0;
-  color: var(--text-muted);
+  color: #fff;
   font-size: 0.92rem;
 }
 
@@ -420,6 +425,15 @@ a {
 .coastal-point {
   padding: 1.2rem 1rem 0;
   border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.coastal-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin: 0 auto 0.8rem;
+  opacity: 0.85;
 }
 
 .coastal-point h3 {
@@ -554,9 +568,15 @@ a {
   }
 
   .hero-top {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.9rem;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.4rem var(--side-padding);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
   }
 
   .logo-full {
@@ -567,17 +587,23 @@ a {
     order: 3;
     margin-left: auto;
     width: 100%;
+    flex: 0 0 auto;
   }
 
   .main-nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.9rem 1rem;
+    display: flex;
+    gap: 1.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
   }
 
   .hero-content {
     text-align: left;
     padding-bottom: 5rem;
+    z-index: 3;
+    pointer-events: none;
   }
 
   .hero-content h1 {
@@ -616,6 +642,7 @@ a {
 
   .lang-toggle {
     padding: 0.5rem 0.7rem;
+    flex: 0 0 auto;
   }
 
   .main-nav a {

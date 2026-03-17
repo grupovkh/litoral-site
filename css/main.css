@@ -39,8 +39,8 @@ a {
   --max-width: 1200px;
   --side-padding: 2rem;
 
-  --bg-page: #eef3f6;
-  --bg-soft: #e7edf1;
+  --bg-page: #d6e1e7;
+  --bg-soft: #ccd9e0;
   --bg-card: #f7fafb;
   --bg-dark: #1e4a57;
   --bg-dark-soft: #254f5d;
@@ -133,7 +133,7 @@ a {
 ========================= */
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 68vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -147,7 +147,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1.4rem var(--side-padding);
   max-width: var(--max-width);
   margin: 0 auto;
@@ -311,8 +311,8 @@ a {
 
 .cta-secondary {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: var(--accent-strong);
+  border: 1px solid var(--accent-strong);
 }
 
 .cta-primary:hover,
@@ -565,6 +565,7 @@ a {
 
   .main-nav {
     order: 3;
+    margin-left: auto;
     width: 100%;
   }
 

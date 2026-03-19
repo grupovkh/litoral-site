@@ -554,20 +554,28 @@ a {
 
 @media (max-width: 768px) {
   :root {
-    --side-padding: 1.2rem;
+    --side-padding: 1.25rem;
   }
 
   .section {
-    padding: 4.25rem var(--side-padding);
+    padding: 0;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
   }
 
   .hero {
-    min-height: 86vh;
+    min-height: 75vh;
   }
 
   .hero-top {
-    gap: 1.25rem;
-    padding: 1.4rem var(--side-padding);
+    gap: 1rem;
+    padding: 1.2rem var(--side-padding);
+    flex-wrap: wrap;
   }
 
   .hero-top::before {
@@ -590,20 +598,17 @@ a {
 
   .main-nav {
     order: 3;
-    margin-left: auto;
     width: 100%;
-    flex: 0 0 auto;
+    margin-left: 0;
   }
 
   .main-nav ul {
-    gap: 1.6rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: none !important;
   }
 
   .hero-content {
     text-align: left;
-    padding-bottom: 5rem;
+    padding: 0 var(--side-padding) 5rem;
   }
 
   .hero-content h1 {
@@ -614,18 +619,78 @@ a {
     font-size: 0.98rem;
   }
 
-  .projects-grid,
-  .services-grid,
-  .coastal-points {
-    grid-template-columns: 1fr;
+  /* PROJECTS CAROUSEL */
+  .projects-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .projects-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .project-card img {
     height: 300px;
   }
 
+  /* SERVICES CAROUSEL */
+  .services-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .service-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* COASTAL CAROUSEL */
+  .coastal-points {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .coastal-point {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .coastal-points::-webkit-scrollbar {
+    display: none;
+  }
+
   .section-header h2 {
     font-size: 2rem;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
   }
 }
 

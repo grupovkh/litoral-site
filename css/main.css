@@ -584,6 +584,19 @@ a {
     width: 100%;
   }
 
+  .hero-top::before {
+  content: "";
+  position: absolute;
+  inset: -10px -20px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.0)
+  );
+  filter: blur(20px);
+  z-index: -1;
+}
+
   .logo-full {
     width: 200px;
   }

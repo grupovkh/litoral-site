@@ -537,12 +537,6 @@ a {
    RESPONSIVE
 ========================= */
 @media (max-width: 992px) {
-  .projects-grid,
-  .coastal-points,
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .main-nav ul {
     gap: 1rem;
   }
@@ -557,158 +551,17 @@ a {
     --side-padding: 1.25rem;
   }
 
-  /* restore vertical rhythm */
+  /* restore proper vertical spacing */
   .section {
     padding: 4rem 0;
   }
 
-  .section-inner {
-    max-width: var(--max-width);
+  .section-inner,
+  .section-inner.narrow {
+    max-width: 100%;
     margin: 0 auto;
     padding-left: var(--side-padding);
     padding-right: var(--side-padding);
-  }
-
-  .hero {
-    min-height: 78vh;
-  }
-
-  .hero-top {
-    gap: 1rem;
-    padding: 1.2rem var(--side-padding);
-    flex-wrap: wrap;
-  }
-
-  .hero-top::before {
-    content: "";
-    position: absolute;
-    inset: -10px -20px;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0)
-    );
-    filter: blur(20px);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .logo-full {
-    width: 180px;
-  }
-
-  /* hide nav links on mobile like VKH */
-  .main-nav {
-    display: none;
-  }
-
-  .hero-content {
-    text-align: left;
-    padding: 0 var(--side-padding) 4.5rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.35rem;
-    line-height: 1.02;
-    max-width: 100%;
-  }
-
-  .motto {
-    font-size: 0.98rem;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  /* PROJECTS = carousel */
-  .projects-grid {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-left: 0;
-    padding-right: 0;
-    align-items: stretch;
-  }
-
-  .projects-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .project-card {
-    flex: 0 0 86%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .project-card img {
-    height: 280px;
-    flex-shrink: 0;
-  }
-
-  .project-card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .project-card h3 {
-    font-size: 1.2rem;
-    line-height: 1.15;
-  }
-
-  .project-meta {
-    font-size: 0.9rem;
-  }
-
-  /* COASTAL = stacked, NOT carousel */
-  .coastal-points {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .coastal-point {
-    padding: 1.2rem 0 0;
-    text-align: center;
-  }
-
-  /* SERVICES = carousel */
-  .services-grid {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-left: 0;
-    padding-right: 0;
-    align-items: stretch;
-  }
-
-  .services-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .service-card {
-    flex: 0 0 86%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-
-  .service-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .service-card p {
-    font-size: 0.95rem;
   }
 
   .section-header {
@@ -725,15 +578,206 @@ a {
     line-height: 1.7;
   }
 
+  .section-action {
+    margin-top: 1.75rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 78vh;
+  }
+
+  .hero-top {
+    gap: 1rem;
+    padding: 1.1rem var(--side-padding);
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .hero-top::before {
+    content: "";
+    position: absolute;
+    inset: -10px -20px;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0)
+    );
+    filter: blur(18px);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .logo-full {
+    width: 170px;
+    max-width: 48vw;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero-content {
+    padding: 1.5rem var(--side-padding) 4.5rem;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    max-width: 100%;
+    font-size: 2.3rem;
+    line-height: 1.03;
+    margin-bottom: 0.9rem;
+  }
+
+  .motto {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+  }
+
+  .hero-actions .cta-primary {
+    width: 100%;
+  }
+
+  /* PROJECTS = carousel */
+  .projects-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .projects-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-card {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .project-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.15;
+  }
+
+  .project-meta {
+    font-size: 0.9rem;
+  }
+
+  /* COASTAL = stacked */
+  .coastal-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-top: 2rem;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .coastal-point {
+    padding: 1.2rem 0 0;
+    text-align: center;
+    border-top: 1px solid var(--line);
+  }
+
+  .coastal-point h3 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .coastal-point p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* SERVICES = carousel */
+  .services-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-card {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+    min-height: 100%;
+    padding: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* footer spacing */
   .footer {
     padding: 2rem var(--side-padding);
   }
 }
 
 @media (max-width: 560px) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+  .hero-content h1 {
+    font-size: 2.05rem;
+  }
+
+  .motto {
+    font-size: 0.95rem;
+  }
+
+  .project-card,
+  .service-card {
+    flex: 0 0 86%;
+  }
+
+  .project-card img {
+    height: 235px;
   }
 
   .cta-primary,
@@ -743,23 +787,5 @@ a {
 
   .lang-toggle {
     padding: 0.5rem 0.7rem;
-    flex: 0 0 auto;
-  }
-
-  .hero-content h1 {
-    font-size: 2.15rem;
-  }
-
-  .motto {
-    font-size: 0.95rem;
-  }
-
-  .project-card,
-  .service-card {
-    flex: 0 0 88%;
-  }
-
-  .project-card img {
-    height: 250px;
   }
 }

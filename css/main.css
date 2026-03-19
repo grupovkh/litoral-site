@@ -362,8 +362,10 @@ a {
 
 .proof-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .proof-item {
@@ -402,7 +404,7 @@ a {
 
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   margin-top: 2.5rem;
   border-top: 1px solid var(--line);
@@ -429,7 +431,7 @@ a {
 .process-step h3 {
   margin: 0 0 0.75rem;
   font-family: var(--font-brand);
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.15;
   color: var(--accent-strong);
@@ -437,8 +439,8 @@ a {
 
 .process-step p {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  line-height: 1.65;
   color: var(--text-muted);
 }
 
@@ -879,25 +881,43 @@ a {
     font-size: 1.2rem;
   }
 
-  .process-steps {
-    grid-template-columns: 1fr;
-    gap: 0;
+.process-steps {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
     margin-top: 2rem;
+    border-top: none;
+    align-items: stretch;
+  }
+
+  .process-steps::-webkit-scrollbar {
+    display: none;
   }
 
   .process-step {
-    padding: 1.5rem 0 0;
+    flex: 0 0 86%;
+    scroll-snap-align: start;
     border-right: none;
-    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 1.25rem 0;
+    min-height: 100%;
   }
 
   .process-step:last-child {
     border-bottom: none;
-    padding-bottom: 0;
   }
 
   .process-step h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+
+  .process-step p {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
 }
@@ -928,4 +948,9 @@ a {
   .lang-toggle {
     padding: 0.5rem 0.7rem;
   }
+
+    .process-step {
+    flex: 0 0 88%;
+  }
+  
 }

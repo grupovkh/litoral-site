@@ -557,8 +557,9 @@ a {
     --side-padding: 1.25rem;
   }
 
+  /* restore vertical rhythm */
   .section {
-    padding: 0;
+    padding: 4rem 0;
   }
 
   .section-inner {
@@ -569,7 +570,7 @@ a {
   }
 
   .hero {
-    min-height: 75vh;
+    min-height: 78vh;
   }
 
   .hero-top {
@@ -593,104 +594,139 @@ a {
   }
 
   .logo-full {
-    width: 200px;
+    width: 180px;
   }
 
+  /* hide nav links on mobile like VKH */
   .main-nav {
-    order: 3;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .main-nav ul {
-    display: none !important;
+    display: none;
   }
 
   .hero-content {
     text-align: left;
-    padding: 0 var(--side-padding) 5rem;
+    padding: 0 var(--side-padding) 4.5rem;
   }
 
   .hero-content h1 {
-    font-size: 2.45rem;
+    font-size: 2.35rem;
+    line-height: 1.02;
+    max-width: 100%;
   }
 
   .motto {
     font-size: 0.98rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
   }
 
-  /* PROJECTS CAROUSEL */
+  /* PROJECTS = carousel */
   .projects-grid {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .project-card {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: stretch;
   }
 
   .projects-grid::-webkit-scrollbar {
     display: none;
   }
 
-  .project-card img {
-    height: 300px;
+  .project-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
-  /* SERVICES CAROUSEL */
+  .project-card img {
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .project-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.15;
+  }
+
+  .project-meta {
+    font-size: 0.9rem;
+  }
+
+  /* COASTAL = stacked, NOT carousel */
+  .coastal-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .coastal-point {
+    padding: 1.2rem 0 0;
+    text-align: center;
+  }
+
+  /* SERVICES = carousel */
   .services-grid {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .service-card {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: stretch;
   }
 
   .services-grid::-webkit-scrollbar {
     display: none;
   }
 
-  /* COASTAL CAROUSEL */
-  .coastal-points {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .coastal-point {
-    flex: 0 0 85%;
+  .service-card {
+    flex: 0 0 86%;
     scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
   }
 
-  .coastal-points::-webkit-scrollbar {
-    display: none;
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
   }
 
   .section-header h2 {
     font-size: 2rem;
+    line-height: 1.05;
   }
 
-  section {
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
+  .section-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .footer {
+    padding: 2rem var(--side-padding);
   }
 }
 
@@ -710,7 +746,20 @@ a {
     flex: 0 0 auto;
   }
 
-  .main-nav a {
-    font-size: 0.72rem;
+  .hero-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .motto {
+    font-size: 0.95rem;
+  }
+
+  .project-card,
+  .service-card {
+    flex: 0 0 88%;
+  }
+
+  .project-card img {
+    height: 250px;
   }
 }
